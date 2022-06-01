@@ -26,11 +26,11 @@ public class WordController {
     }
 
     @GetMapping("/wordall")
-    public String hello2(){
+    public List<WordDto> wordall(){
         List<WordDto> wordAll = wordService.selectAll();
         for(int i=0; i<wordAll.size(); i++){
             System.out.println(wordAll.get(i));
         }
-        return "word test ing";
+        return wordAll;
     }
 }
