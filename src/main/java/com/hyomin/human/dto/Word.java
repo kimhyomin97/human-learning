@@ -3,7 +3,7 @@ package com.hyomin.human.dto;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
-public class WordDto {
+public class Word {
     private String eng;
     private String kor;
 

@@ -1,10 +1,8 @@
 package com.hyomin.human.controller;
 
-import com.hyomin.human.dto.WordDto;
+import com.hyomin.human.dto.Word;
 import com.hyomin.human.service.WordService;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +12,7 @@ import java.util.List;
 
 @CrossOrigin("*")
 @RestController
-//@RequestMapping
+@RequestMapping("/word")
 @RequiredArgsConstructor
 public class WordController {
 
@@ -26,8 +24,8 @@ public class WordController {
     }
 
     @GetMapping("/wordall")
-    public List<WordDto> wordall(){
-        List<WordDto> wordAll = wordService.selectAll();
+    public List<Word> wordall(){
+        List<Word> wordAll = wordService.selectAll();
         for(int i=0; i<wordAll.size(); i++){
             System.out.println(wordAll.get(i));
         }

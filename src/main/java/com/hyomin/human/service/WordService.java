@@ -1,10 +1,9 @@
 package com.hyomin.human.service;
 
-import com.hyomin.human.dto.WordDto;
-import org.springframework.stereotype.Service;
+import com.hyomin.human.dto.Word;
 
 import java.util.List;
 
 public interface WordService {
-    List<WordDto> selectAll();
+    List<Word> selectAll();
 }

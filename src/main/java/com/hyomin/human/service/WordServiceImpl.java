@@ -1,6 +1,6 @@
 package com.hyomin.human.service;
 
-import com.hyomin.human.dto.WordDto;
+import com.hyomin.human.dto.Word;
 import com.hyomin.human.mapper.WordMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ public class WordServiceImpl implements WordService {
     private final WordMapper wordMapper;
 
     @Override
-    public List<WordDto> selectAll() {
+    public List<Word> selectAll() {
         return wordMapper.selectAll();
     }
 }
