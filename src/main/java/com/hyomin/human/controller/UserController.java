@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.http.HttpSession;
 import java.util.Map;
+import java.util.Optional;
 
 @CrossOrigin("*")
 @RestController
@@ -20,7 +21,9 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping("/login") // 로그인 정보 리턴
-    public Map<String, Object> userLogin(User userDto, HttpSession httpSession){
+    public Optional<User> userLogin(User userDto, HttpSession httpSession){
+        System.out.println("CONTROLLER");
+        System.out.println(userDto);
         return userService.userLogin(userDto, httpSession);
     }
 

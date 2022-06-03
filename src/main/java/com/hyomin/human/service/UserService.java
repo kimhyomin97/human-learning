@@ -4,6 +4,7 @@ import com.hyomin.human.dto.User;
 
 import javax.servlet.http.HttpSession;
 import java.util.Map;
+import java.util.Optional;
 
 public interface UserService {
     // CRUD
@@ -11,7 +12,7 @@ public interface UserService {
     // Create // sign-up
 
     // Read // sign-in
-    Map<String, Object> userLogin(User userDto, HttpSession httpSession);
+    Optional<User> userLogin(User userDto, HttpSession httpSession);
 
     // Update // user update
 
