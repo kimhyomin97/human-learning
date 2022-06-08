@@ -27,7 +27,7 @@ public class WordController {
     public List<Word> wordall(){
         List<Word> wordAll = wordService.selectAll();
         for(int i=0; i<wordAll.size(); i++){
-            System.out.println(wordAll.get(i));
+//            System.out.println(wordAll.get(i));
         }
         return wordAll;
     }
