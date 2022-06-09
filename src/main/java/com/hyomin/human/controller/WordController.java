@@ -23,12 +23,12 @@ public class WordController {
         return "hello from rest controller";
     }
 
-    @GetMapping("/wordall")
-    public List<Word> wordall(){
-        List<Word> wordAll = wordService.selectAll();
-        for(int i=0; i<wordAll.size(); i++){
-//            System.out.println(wordAll.get(i));
-        }
-        return wordAll;
+    @GetMapping("/toeic")
+    public List<Word> toeic(){
+        List<Word> toeic = wordService.selectAll();
+//        for(int i=0; i<toeic.size(); i++){
+////            System.out.println(wordAll.get(i));
+//        }
+        return toeic;
     }
 }
