@@ -3,10 +3,7 @@ package com.hyomin.human.controller;
 import com.hyomin.human.dto.Word;
 import com.hyomin.human.service.WordService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,17 +15,19 @@ public class WordController {
 
     private final WordService wordService;
 
-    @GetMapping("/hello")
-    public String hello(){
-        return "hello from rest controller";
+    @GetMapping("/wordlist")
+    public List<Word> wordList(@RequestParam(value="target") String target, @RequestParam(value="checkid") String checkid){
+//        System.out.println(target);
+//        System.out.println(checkid);
+        List<Word> wordlist = wordService.selectAll(target, checkid);
+        return wordlist;
     }
 
-    @GetMapping("/toeic")
-    public List<Word> toeic(){
-        List<Word> toeic = wordService.selectAll();
-//        for(int i=0; i<toeic.size(); i++){
-////            System.out.println(wordAll.get(i));
-//        }
-        return toeic;
+    @PostMapping("/wordcheck")
+    public String wordCheck(@RequestBody Word wordDto){
+        System.out.println(wordDto.getWordid());
+        System.out.println(wordDto.getUserid());
+        wordService.updateCheck(wordDto.getWordid(), wordDto.getUserid());
+        return "success";
     }
 }

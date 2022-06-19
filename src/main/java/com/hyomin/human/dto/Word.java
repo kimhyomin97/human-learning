@@ -10,5 +10,7 @@ import lombok.Setter;
 public class Word {
     private String eng;
     private String kor;
-
+    private String userid;
+    private String wordid;
+    private String id;
 }

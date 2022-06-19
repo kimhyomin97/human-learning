@@ -14,7 +14,12 @@ public class WordServiceImpl implements WordService {
     private final WordMapper wordMapper;
 
     @Override
-    public List<Word> selectAll() {
-        return wordMapper.selectAll();
+    public List<Word> selectAll(String target, String checkid) {
+        return wordMapper.selectAll(target, checkid);
+    }
+
+    @Override
+    public void updateCheck(String wordid, String userid) {
+        wordMapper.updateCheck(wordid, userid);
     }
 }
