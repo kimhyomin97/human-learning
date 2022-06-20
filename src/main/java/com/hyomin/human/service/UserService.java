@@ -17,4 +17,8 @@ public interface UserService {
     // Update // user update
 
     // Delete // user delete
+
+
+
+    public User test(User userDto);
 }

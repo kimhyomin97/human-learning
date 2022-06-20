@@ -11,4 +11,11 @@ public class User {
     private String userid;
     private String userpw;
     private String email;
+
+    public User(String idx, String userid, String userpw, String email) {
+        this.idx = idx;
+        this.userid = userid;
+        this.userpw = userpw;
+        this.email = email;
+    }
 }

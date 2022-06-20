@@ -24,4 +24,8 @@ public class UserServiceImpl implements UserService{
         Map<String, Object> loginResult = new HashMap<>();
         return userMapper.selectLoginUser(userDto.getUserid(), userDto.getUserpw());
     }
+
+    public User test(User userDto){
+        return userDto;
+    }
 }
