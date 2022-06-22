@@ -16,6 +16,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 @SpringBootTest
 //@RequiredArgsConstructor
 public class UserServiceTest {
@@ -46,7 +48,8 @@ public class UserServiceTest {
         Optional<User> findUser = userMapper.selectLoginUser(user.getUserid(), user.getUserpw());
         String userid = findUser.get().getUserid();
 //        Assertions.assertThat(userid).isEqualTo("1234");
-        Assertions.assertEquals(userid, "1234");
+        assertEquals(userid, "1234");
+        //Assertions.assertThat 보다는 static import를 쓰는게 더 좋다
     }
 
     @Test
@@ -57,7 +60,7 @@ public class UserServiceTest {
         Optional<User> findUser = userMapper.selectLoginUser(user.getUserid(), user.getUserpw());
         String userid = findUser.get().getUserid();
 //        Assertions.assertThat(userid).isEqualTo("12345");
-        Assertions.assertEquals(userid, "12345");
+        assertEquals(userid, "12345");
     }
 
 }
