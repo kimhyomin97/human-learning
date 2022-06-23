@@ -21,12 +21,9 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 //@RequiredArgsConstructor
 public class UserServiceTest {
-    // 테스트 코드의 중요성
 
-//   UserService userService;
     @Autowired
     private UserMapper userMapper;
-//    private final UserMapper testMapper;
 
 //    @Test
 //    void join(){

@@ -25,7 +25,4 @@ public class UserServiceImpl implements UserService{
         return userMapper.selectLoginUser(userDto.getUserid(), userDto.getUserpw());
     }
 
-    public User test(User userDto){
-        return userDto;
-    }
 }
