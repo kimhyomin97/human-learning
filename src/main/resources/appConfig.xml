@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- xml 테스트 (레거시 프로젝트에서 쓰일수도 있다) -->
+<!-- 이부분 지워도 프로젝트에 영향 없다 (Test에도 영향 없다)-->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    <bean id="userService" class="com.hyomin.human.service.UserServiceImpl" >-->
+<!--        <constructor-arg name="user" ref="User">-->
+<!--    </bean>-->
+</beans>
