@@ -23,7 +23,7 @@ public class User {
     @Column(length = 200, nullable = false)
     private String userpw;
 
-    @Builder
+    @Builder //
     public User(String userid, String userpw){
         this.userid = userid;
         this.userpw = userpw;
